@@ -7,6 +7,7 @@ body {
     line-height: 1.5;
     background-color: #ffffff;
 }
+
 header {
     background-color: #e37528;
     background-image: url('img/up_01.png');
@@ -23,14 +24,17 @@ header {
     max-width: 96%;
     margin: 0 auto;
 }
+
 .header-text a {
     color: #ffffff;
     text-decoration: none;
     text-shadow: none; /* Убираем тень */
-    }
+}
+
 .header-text a:hover {
     color: #f0ff00;
 }
+
 .header-content {
     display: flex;
     align-items: center;
@@ -39,42 +43,84 @@ header {
     padding: 0 20px;
     margin: 0 auto;
 }
+
 .header-logo {
     flex: 0 0 20%;
     max-width: 20%;
     text-align: center;
+    margin-left: 0; /* Убираем лишний отступ */
 }
+
 .header-logo img {
     max-height: 150px;
     width: auto;
     border-radius: 8px;
 }
+
 .header-text {
     flex: 1;
     text-align: left;
     margin-left: 50px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
 header h1 {
     font-size: 2.5em;
     margin-bottom: 5px;
     margin-top: 0;
 }
+
 header p {
     font-size: 1.2em;
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.header-flags {
+    display: flex;
+    flex-direction: column; /* Размещаем флаги в столбик */
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px; /* Добавляем отступ справа, чтобы отделить от логотипа */
+}
+
+.flag-container {
+    margin: 5px 0; /* Отступ между флагами */
+}
+
+.flag {
+    border: 2px solid transparent;
+    padding: 2px;
+    transition: border-color 0.3s;
+}
+
+.flag.active:hover {
+    border-color: #f0ff00; /* Жёлтая обводка при наведении */
+}
+
+.flag.not-active {
+    border: 2px solid #ffffff; /* Белая обводка у текущего языка */
+}
+
+
+.header-flags img {
+    width: 40px; /* Задаем размер для флагов */
+    height: auto;
+    display: block;
+}
+
 section {
     padding: 20px;
     text-align: center;
 }
+
 h2 {
     color: #e37528;
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 15px;
 }
+
 .grey-strip {
     background-color: #acacac;
     padding: 10px 20px 10px 20px;
@@ -87,11 +133,13 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
 .grey-strip p {
     margin: 0; /* Убираем стандартные отступы у параграфа */
     padding: 0;
-	text-align: left;
+    text-align: left;
 }
+
 .text-description {
     padding: 0 20px;
     margin-bottom: 20px;
@@ -100,6 +148,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,6 +159,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
 .item {
     text-align: center;
     background-color: #f9f9f9;
@@ -117,6 +167,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .item img {
     max-width: 100%;
     height: auto;
@@ -124,10 +175,12 @@ h2 {
     margin: 0 auto 8px;
     border-radius: 8px;
 }
+
 .item p {
     font-size: 0.9em;
     color: #555;
 }
+
 footer {
     background-color: #e37528;
     padding: 20px;
@@ -139,6 +192,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
 footer p {
     color: #fff;
     font-size: 1.1em;
@@ -149,35 +203,49 @@ footer p {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     header {
         background-image: linear-gradient(rgba(227, 117, 40, 0.2), rgba(227, 117, 40, 0.2)), url('img/up_01.png');
         background-blend-mode: multiply;
         background-position: right center;
-        background-size: contain; /* Изменяем на contain и здесь */
+        background-size: contain;
     }
 }
+
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
     }
+
     header h1 {
         font-size: 2em;
     }
+
     .orange-strip {
         font-size: 1.1em;
     }
+
     .header-content {
         flex-direction: column;
         text-align: center;
     }
+
+    .header-flags {
+        flex-direction: row; /* На маленьких экранах флаги в ряд */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
     .header-logo {
         max-width: 100%;
         margin-bottom: 10px;
     }
+
     .header-text {
         margin-left: 0;
         text-align: center;
     }
+
     header {
         background-image: none;
     }

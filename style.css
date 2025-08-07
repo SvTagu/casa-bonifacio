@@ -1,0 +1,184 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 10px 0 0; /* Отступ 10px сверху */
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+header {
+    background-color: #e37528;
+    background-image: url('img/up_01.png');
+    background-size: contain; /* Изменяем на contain */
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 20px 0;
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    max-width: 96%;
+    margin: 0 auto;
+}
+.header-text a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: none; /* Убираем тень */
+    }
+.header-text a:hover {
+    color: #f0ff00;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 96%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.header-logo {
+    flex: 0 0 20%;
+    max-width: 20%;
+    text-align: center;
+}
+.header-logo img {
+    max-height: 150px;
+    width: auto;
+    border-radius: 8px;
+}
+.header-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 50px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+header p {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+section {
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    color: #e37528;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.grey-strip {
+    background-color: #acacac;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.3em;
+    margin: 0;
+    border-radius: 8px;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grey-strip p {
+    margin: 0; /* Убираем стандартные отступы у параграфа */
+    padding: 0;
+	text-align: left;
+}
+.text-description {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    padding: 0 20px;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
+    border-radius: 8px;
+}
+.item p {
+    font-size: 0.9em;
+    color: #555;
+}
+footer {
+    background-color: #e37528;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer p {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        background-image: linear-gradient(rgba(227, 117, 40, 0.2), rgba(227, 117, 40, 0.2)), url('img/up_01.png');
+        background-blend-mode: multiply;
+        background-position: right center;
+        background-size: contain; /* Изменяем на contain и здесь */
+    }
+}
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .orange-strip {
+        font-size: 1.1em;
+    }
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-logo {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .header-text {
+        margin-left: 0;
+        text-align: center;
+    }
+    header {
+        background-image: none;
+    }
+}
